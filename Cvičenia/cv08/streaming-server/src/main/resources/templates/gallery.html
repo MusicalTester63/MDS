@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Gallery</title>
+</head>
+<body>
+    <h1>Media Gallery</h1>
+    <h2>David Hamran 230253</h2>
+
+
+
+    <table>
+        <tr th:each="movie : ${movies}">
+            <td><a th:href="@{'video/'+${movie.getFile_name()}}"><img th:src=@{'images/'+${movie.getImage_name()}}></a></td>
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+</html>
